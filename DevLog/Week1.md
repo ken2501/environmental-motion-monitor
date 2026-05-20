@@ -2,18 +2,67 @@
 
 ## Goals
 - Set up project repository
-- Plan system architecture
-- Test Arduino Nano communication
-- Connect first sensor
+- Establish development workflow
+- Plan telemetry system architecture
+- Verify Arduino Nano communication
+- Prepare for sensor integration
+
+---
 
 ## Current Progress
-Repository created and project structure initialized.
+- GitHub repository created
+- Initial folder structure organized
+- README and documentation started
+- Development environment setup in progress
+
+---
+
+## Planned System Architecture
+
+Arduino Nano → Sensor Inputs → Serial USB Communication → Python Telemetry Dashboard
+
+The system goal is to collect real-world environmental and motion data and visualize it live on a PC dashboard.
+
+---
 
 ## Planned Hardware
 - Arduino Nano
-- Sensors TBD
 - Breadboard
+- Jumper wires
+- Environmental and motion sensors (TBD)
 - USB serial communication
 
+---
+
+## Development Environment Setup
+
+### Completed
+- Installed Git
+- Installed Arduino IDE
+- Installed Visual Studio Code
+- Configured GitHub repository
+- Verified local Git workflow
+
+---
+
+## Current Goal
+Establish a reliable serial telemetry pipeline between Arduino Nano and PC software.
+
+---
+
+## Next Tasks
+- Upload first serial communication test
+- Read serial data using Python
+- Design telemetry packet format
+- Build basic dashboard visualization
+
+---
+
 ## Notes
-Goal is to build a real-time environmental and motion telemetry system with PC visualization.
+Main focus is building a complete engineering workflow rather than isolated sensor demonstrations.
+
+Project will prioritize:
+- real hardware interaction
+- clean architecture
+- documentation
+- iterative development
