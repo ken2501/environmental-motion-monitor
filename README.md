@@ -1,7 +1,7 @@
 # Environmental Motion Monitor
 
 ## Overview
-A real-time telemetry system using an Arduino Nano, motion sensing, and environmental sensors to collect, process, and visualize live sensor data.
+A real-time telemetry system using an Arduino Nano, motion sensing, and environmental sensors to collect, process, and visualizs
 
 ## Goals
 - Learn embedded systems fundamentals
@@ -34,6 +34,7 @@ A real-time telemetry system using an Arduino Nano, motion sensing, and environm
 
 ## Initial Architecture
 
+'''text
 ┌────────────────────────┐
 │   Physical Environment │
 │                        │   
@@ -90,6 +91,6 @@ A real-time telemetry system using an Arduino Nano, motion sensing, and environm
 │ - Telemetry    │   │                │
 │   monitoring   │   │                │
 └────────────────┘   └────────────────┘
-
+'''text
 ## Project Status
 Planning phase
