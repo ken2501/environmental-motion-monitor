@@ -34,7 +34,7 @@ A real-time telemetry system using an Arduino Nano, motion sensing, and environm
 
 ## Initial Architecture
 
-'''
+```
 ┌────────────────────────┐
 │   Physical Environment │
 │                        │   
@@ -91,6 +91,6 @@ A real-time telemetry system using an Arduino Nano, motion sensing, and environm
 │ - Telemetry    │   │                │
 │   monitoring   │   │                │
 └────────────────┘   └────────────────┘
-'''
+```
 ## Project Status
 Planning phase
