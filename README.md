@@ -1,7 +1,7 @@
 # Environmental Motion Monitor
 
 ## Overview
-A real-time monitoring system using an Arduino Nano and multiple sensors to collect, process, and visualize environmental and motion data.
+A real-time telemetry system using an Arduino Nano, motion sensing, and environmental sensors to collect, process, and visualize live sensor data.
 
 ## Goals
 - Learn embedded systems fundamentals
@@ -11,18 +11,85 @@ A real-time monitoring system using an Arduino Nano and multiple sensors to coll
 - Practice engineering documentation
 
 ## Planned Features
-- Distance sensing
-- Motion/orientation tracking
-- Temperature monitoring
+- Motion and orientation tracking
+- Environmental monitoring
 - Live serial telemetry
-- Python dashboard visualization
+- Real-time Python dashboard visualization
+- Telemetry data logging    
+
+## Planned Development Stages
+1. Environment setup and serial communication
+2. Sensor integration
+3. Structured telemetry packets
+4. Python telemetry backend
+5. Real-time dashboard visualization
+6. Data logging and filtering
 
 ## Hardware
 - Arduino Nano
-- HC-SR04 ultrasonic sensor
+- BME280 environmental sensor
 - MPU6050 IMU
 - Breadboard
 - Jumper wires
+
+## Initial Architecture
+
+┌────────────────────────┐
+│   Physical Environment │
+│                        │   
+│ - Motion               │
+│ - Vibration            │ 
+│ - Temperature          │
+│ - Humidity             │
+└──────────┬─────────────┘
+           │
+           ▼
+┌──────────────────────────┐
+│       Sensors            │ 
+│                          │ 
+│ - MPU6050 (IMU)          │
+│ - BME280 (Environmental) │
+└──────────┬───────────────┘
+           │
+           │ I2C Communication
+           ▼
+┌─────────────────────────────────┐
+│    Arduino Nano                 │
+│                                 │
+│ Responsibilities:               │
+│ - Read sensor data              │
+│ - Manage sampling timing        │ 
+│ - Package telemetry             │ 
+│ - Send serial packets           │
+│ - Perform lightweight filtering │
+└──────────┬──────────────────────┘
+           │
+           │ USB Serial (115200 baud)
+           ▼
+┌───────────────────────────────┐
+│   Python Backend              │             
+│                               │
+│ Responsibilities:             │
+│ - Read serial stream          │
+│ - Validate telemetry packets  │
+│ - Parse sensor data           │
+│ - Maintain data buffers       │
+│ - Log telemetry data          │
+└──────────┬────────────────────┘
+           │
+           ├──────────────┐
+           │              │
+           ▼              ▼
+┌────────────────┐   ┌────────────────┐
+│ Live Dashboard │   │ Data Logging   │
+│                │   │                │
+│ - Real-time    │   │ - CSV storage  │
+│   graphs       │   │ - Historical   │
+│ - System       │   │   telemetry    │
+│   status       │   │ - Session data │
+│ - Telemetry    │   │                │
+│   monitoring   │   │                │
+└────────────────┘   └────────────────┘
 
 ## Project Status
 Planning phase
